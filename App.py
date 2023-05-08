@@ -29,10 +29,16 @@ def load_ml_toolkit(relative_path):
     Returns:
         file: It returns the pickle file (which contains the Machine Learning items in this case).
     """
+    
+    with gzip.open("ML_toolkit.gz", "rb") as file:
+        loaded_toolkit = pickle.loads(file.read())
 
-    with open(relative_path, "rb") as file:
-        loaded_object = pickle.load(file)
-    return loaded_object
+    #loaded_object = loaded_toolkit["scaler"]
+      
+    #with gzip.open('ML_toolkit.gz', 'rb') as m:
+      #loaded_object = m.read()
+
+    return loaded_toolkit
 
 # Function to load the dataset
 @st.cache_data()
