@@ -33,12 +33,12 @@ def load_ml_toolkit(relative_path):
     with gzip.open("ML_toolkit.gz", "rb") as file:
         loaded_toolkit = pickle.loads(file.read())
 
-    #loaded_object = loaded_toolkit["scaler"]
+    loaded_object = loaded_toolkit
       
     #with gzip.open('ML_toolkit.gz', 'rb') as m:
       #loaded_object = m.read()
 
-    return loaded_toolkit
+    return loaded_object
 
 # Function to load the dataset
 @st.cache_data()
@@ -87,11 +87,11 @@ def getDateFeatures(df, date):
 
 # ----- Loading the key components
 # Loading the base dataframe
-rpath = r"streamlit_src\merged_data.csv"
+rpath = r"merged_data.csv"
 merged_data = load_data(rpath)
 
 # Loading the toolkit
-loaded_toolkit = load_ml_toolkit(r"streamlit_src\ML_toolkit")
+loaded_toolkit = load_ml_toolkit(r"ML_toolkit")
 if "results" not in st.session_state:
     st.session_state["results"] = []
 
