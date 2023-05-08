@@ -108,7 +108,7 @@ dataset = st.container()
 features_and_output = st.container()
 
 # Icon for the page
-image = Image.open(r"streamlit_src\AI-Sales-Prediction.png")
+image = Image.open(r"AI-Sales-Prediction.png")
 
 # Instantiating the form to receive inputs from the user
 form = st.form(key="information", clear_on_submit=True)
