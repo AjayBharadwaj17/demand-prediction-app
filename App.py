@@ -87,11 +87,11 @@ def getDateFeatures(df, date):
 
 # ----- Loading the key components
 # Loading the base dataframe
-rpath = r"merged_data.csv"
+rpath = r"merged_data.csv.gz"
 merged_data = load_data(rpath)
 
 # Loading the toolkit
-loaded_toolkit = load_ml_toolkit(r"ML_toolkit")
+loaded_toolkit = load_ml_toolkit(r"ML_toolkit.gz")
 if "results" not in st.session_state:
     st.session_state["results"] = []
 
