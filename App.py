@@ -115,7 +115,7 @@ form = st.form(key="information", clear_on_submit=True)
 
 # Structuring the header section
 with header:
-    header.write("This app is built of a machine learning model to predict the sales of a retail company based on given variables for which you will make inputs (see the input section below). The model was trained based on the Corporation Favorita Retail Sales dataset.")
+    header.write("This app is built of a machine learning model to predict the demand of a retail company based on given variables for which you will make inputs (see the input section below). The model was trained based on the store item demand forecasting dataset.")
     header.image(image)
     #header.markdown("*Source: [Artificial Intelligence for Sales Prediction](https://www.mydatamodels.com/solutions/artificial-intelligence-for-sales-prediction/)*")
     header.write("---")
